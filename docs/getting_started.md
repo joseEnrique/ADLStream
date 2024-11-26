@@ -12,9 +12,9 @@ Stream objects can be created using the classes from `ADLStream.data.stream`. We
 In this example, we will use the `FakeStream`, which implements a sine wave.
 
 ```python
-import ADLStream
+import ADLStream2
 
-stream = ADLStream.data.stream.FakeStream(
+stream = ADLStream2.data.stream.FakeStream(
     num_features=6, stream_length=1000, stream_period=100
 )
 ```
@@ -50,7 +50,7 @@ evaluator = ADLStream.evaluation.PrequentialEvaluator(
     chunk_size=10,
     metric="MAE",
     fadding_factor=0.98,
-    results_file="ADLStream.csv",
+    results_file="ADLStream2.csv",
     dataset_name="Fake Data",
     show_plot=True,
     plot_file="test.jpg",
@@ -90,7 +90,7 @@ adls = ADLStream.ADLStream(
     model_loss=model_loss,
     model_optimizer=model_optimizer,
     model_parameters=model_parameters,
-    log_file="ADLStream.log",
+    log_file="ADLStream2.log",
 )
 ```
 
@@ -170,21 +170,21 @@ If you need to know more details of what the framework is doing, you can check t
 The complete example can be found below
 
 ```python
-import ADLStream
+import ADLStream2
 
-stream = ADLStream.data.stream.FakeStream(
+stream = ADLStream2.data.stream.FakeStream(
     num_features=6, stream_length=1000, stream_period=100
 )
 
-stream_generator = ADLStream.data.MovingWindowStreamGenerator(
+stream_generator = ADLStream2.data.MovingWindowStreamGenerator(
     stream=stream, past_history=12, forecasting_horizon=3, shift=1
 )
 
-evaluator = ADLStream.evaluation.PrequentialEvaluator(
+evaluator = ADLStream2.evaluation.PrequentialEvaluator(
     chunk_size=10,
     metric="MAE",
     fadding_factor=0.98,
-    results_file="ADLStream.csv",
+    results_file="ADLStream2.csv",
     dataset_name="Fake Data",
     show_plot=True,
     plot_file="test.jpg",
@@ -201,7 +201,7 @@ model_parameters = {
     "dense_dropout": 0,
 }
 
-adls = ADLStream.ADLStream(
+adls = ADLStream2.ADLStream(
     stream_generator=stream_generator,
     evaluator=evaluator,
     batch_size=60,
@@ -210,7 +210,7 @@ adls = ADLStream.ADLStream(
     model_loss=model_loss,
     model_optimizer=model_optimizer,
     model_parameters=model_parameters,
-    log_file="ADLStream.log",
+    log_file="ADLStream2.log",
 )
 
 adls.run()

@@ -1,6 +1,6 @@
 
 
-site_name: ADLStream
+site_name: ADLStream2
 site_url: https://adlstream.readthedocs.io
 site_description: Asynchronous dual-pipeline deep learning framework for online data stream mining.
 site_author: Pedro Lara-Benítez & Manuel Carranza-García
@@ -42,7 +42,7 @@ nav:
     - First example: getting_started.md
   - API: 
     - API/index.md
-    - ADLStream: API/ADLStream.ADLStream.md
+    - ADLStream: API/ADLStream2.ADLStream2.md
     - Data:
       - Stream: 
         - BaseStream: API/data/stream/BaseStream.md

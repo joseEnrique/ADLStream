@@ -4,9 +4,9 @@ from setuptools import setup, find_packages
 HERE = pathlib.Path(__file__).parent
 
 VERSION = "0.1.4"
-PACKAGE_NAME = "ADLStream"
-AUTHOR = "Pedro Lara-Benítez & Manuel Carranza-García"
-AUTHOR_EMAIL = "plbenitez@us.es"
+PACKAGE_NAME = "ADLStream2"
+AUTHOR = "Pedro Lara-Benítez & Manuel Carranza-García & Jose Enrique Ruiz Navarro"
+AUTHOR_EMAIL = "joseenriqueruiznavarro@gmail.com"
 URL = "https://adlstream.readthedocs.io"
 PROJECT_URLS = {
     "Download": "https://github.com/pedrolarben/ADLStream/tags",
@@ -34,14 +34,13 @@ CLASSIFIERS = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 LICENSE = "MIT"
-DESCRIPTION = "ADLStream is a novel asynchronous dual-pipeline deep learning framework for data stream mining"
+DESCRIPTION = "ADLStream2 is a novel asynchronous dual-pipeline deep learning framework for data stream mining"
 LONG_DESCRIPTION = (HERE / "README.md").read_text()
 LONG_DESC_TYPE = "text/markdown"
 
 INSTALL_REQUIRES = [
     "numpy",
     "tensorflow>=2.1.0",
-    "tensorflow-addons>=0.11.0",
     "keras-tcn",
     "matplotlib",
     "scikit-learn",

@@ -72,7 +72,7 @@ The following NVIDIA® software must be installed on your system:
 You can install ADLStream and its dependencies from PyPI with:
 
 ```bash
-pip install ADLStream
+pip install ADLStream2
 ```
 
 We strongly recommend that you install ADLStream in a dedicated virtualenv, to avoid conflicting with your system packages.
@@ -80,7 +80,7 @@ We strongly recommend that you install ADLStream in a dedicated virtualenv, to a
 To use ADLStream:
 
 ```python 
-import ADLStream
+import ADLStream2
 ```
 
 ## Getting Started 
@@ -97,10 +97,10 @@ Stream objects can be created using the classes from `ADLStream.data.stream`. We
 In this example, we will use the `FakeStream`, which implements a sine wave.
 
 ```python
-import ADLStream
+import ADLStream2
 
-stream = ADLStream.data.stream.FakeStream(
-    num_features=6, stream_length=1000, stream_period=100
+stream = ADLStream2.data.stream.FakeStream(
+  num_features=6, stream_length=1000, stream_period=100
 )
 ```
 
@@ -135,7 +135,7 @@ evaluator = ADLStream.evaluation.PrequentialEvaluator(
     chunk_size=10,
     metric="MAE",
     fadding_factor=0.98,
-    results_file="ADLStream.csv",
+    results_file="ADLStream2.csv",
     dataset_name="Fake Data",
     show_plot=True,
     plot_file="test.jpg",
@@ -175,7 +175,7 @@ adls = ADLStream.ADLStream(
     model_loss=model_loss,
     model_optimizer=model_optimizer,
     model_parameters=model_parameters,
-    log_file="ADLStream.log",
+    log_file="ADLStream2.log",
 )
 ```
 

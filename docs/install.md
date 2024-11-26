@@ -30,7 +30,7 @@ The following NVIDIA® software must be installed on your system:
 You can install ADLStream and its dependencies from PyPI with:
 
 ```bash
-pip install ADLStream
+pip install ADLStream2
 ```
 
 We strongly recommend that you install ADLStream in a dedicated virtualenv, to avoid conflicting with your system packages.
@@ -38,7 +38,7 @@ We strongly recommend that you install ADLStream in a dedicated virtualenv, to a
 To use ADLStream:
 
 ```python 
-import ADLStream
+import ADLStream2
 ```
 
 Check [getting started](../getting_started) for an example of use.
